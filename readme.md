@@ -146,22 +146,22 @@ All examples will require the app running (you can do it running 2 terminals. on
 Just open this link: http://localhost:9000/
 
 ## User creation:
-post to http://localhost:9000/user
+post to http://localhost:9000/user<br>
 request payload: { "email": "email@user.com", "password": "start123" }
 
 ## jwt token:
-post to http://localhost:9000/token
+post to http://localhost:9000/token<br>
 request payload: { "email": "email@user.com", "password": "start123" }
 
 ## create a example data
 post to http://localhost:9000/example
-request payload: { "text": "example text" }
+request payload: { "text": "example text" }<br>
 Add header: "Authorization": "Bearer {generated jwt token}"
 
 ## get all example data
-get to http://localhost:9000/example
+get to http://localhost:9000/example<br>
 Add header: "Authorization": "Bearer {generated jwt token}"
 
 ## get single example data by id
-get to http://localhost:9000/example/{id}
+get to http://localhost:9000/example/{id}<br>
 Add header: "Authorization": "Bearer {generated jwt token}"
