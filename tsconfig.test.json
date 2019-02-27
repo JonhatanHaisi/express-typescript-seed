@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "commonjs",
+        "typeRoots": [
+            "node_modules/@types"
+        ]
+    },
+    "include": [
+        "src/**/*.ts",
+        "src/*.ts",
+        "test/**/*.ts",
+        "test/*.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

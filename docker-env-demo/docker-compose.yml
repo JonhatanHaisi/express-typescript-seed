@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+
+  node:
+    image: rest-seed-image
+    build:
+      context: ../
+      dockerfile: ./docker-env-demo/Dockerfile
+    ports:
+      - 8000:9000
+    environment:
+      NODE_ENV: production
+      DB_CONNECTION: postgresql://postgres:passwd123@pg:5432/postgres
+    command: node index.js
+    depends_on: 
+      - pg
+      - pgadmin
+    
+  pg:
+    image: postgres
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: passwd123
+  
+  pgadmin:
+    image: dpage/pgadmin4
+    ports: 
+      - 9001:80
+    environment:
+      PGADMIN_DEFAULT_EMAIL: user@domain.com
+      PGADMIN_DEFAULT_PASSWORD: SuperSecret

@@ -1,0 +1,6 @@
+build
+node_modules
+release
+logs
+.nyc_output
+che
